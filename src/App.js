@@ -9,11 +9,18 @@ function App() {
   const onClick = () => {
     setNum(num + 1);
   };
+
+  const onChange = () => {
+    title[0] = '여자코트';
+    setTitle([...title]);
+  };
+
   return (
     <div className="App">
       <div className="black-nav">
         <h4>블로그</h4>
       </div>
+      <button onClick={onChange}>버튼</button>
       <div className="list">
         <h4>
           {title[0]} <span onClick={onClick}>👍</span> {num}
